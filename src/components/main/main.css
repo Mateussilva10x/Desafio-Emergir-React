@@ -1,14 +1,13 @@
 #main {
   display: flex;
   flex: 1;
-  background-color: #f5f6fa;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 #main .load {
   margin-top: 100px;
-  display: none;
+  display: flex;
   flex: 1;
   align-items: center;
   flex-direction: column;

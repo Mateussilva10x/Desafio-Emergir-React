@@ -1,15 +1,21 @@
 import { createContext } from "react";
-import { useFetch } from "../hooks/useFetch";
 
-const key = "https://justcors.com/tl_d625c00/";
+import { useQuery } from "react-query";
+import { fetcher } from "../utils/Fetcher";
+
+const key = "https://justcors.com/tl_ab637e4/";
 const token = "379238b5-705c-48bc-b8c9-27e26676b417";
 
 export const NotesContext = createContext();
 
 export const NotesContextProvider = ({ children }) => {
-  const { data: notes } = useFetch(
-    `${key}https://farmbox.cc/api/public/technical_visit_report/notes.json?token=${token}`
-  );
+  const url = `${key}https://farmbox.cc/api/public/technical_visit_report/notes.json?token=${token}`;
+
+  const {
+    data: notes,
+    isLoading,
+    error,
+  } = useQuery("allNotes", () => fetcher(url));
 
   const notesFarm = [];
   const notesPlantations = [];
@@ -20,7 +26,9 @@ export const NotesContextProvider = ({ children }) => {
   );
 
   return (
-    <NotesContext.Provider value={{ notesFarm, notesPlantations }}>
+    <NotesContext.Provider
+      value={{ notesFarm, notesPlantations, isLoading, error }}
+    >
       {children}
     </NotesContext.Provider>
   );

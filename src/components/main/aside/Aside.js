@@ -7,7 +7,6 @@ const Aside = () => {
 
   if (!farm) return null;
   if (!rain) return null;
-  console.log(farm);
 
   return (
     <aside className="main-aside">
@@ -41,7 +40,7 @@ const Aside = () => {
             <span>Pluviometria</span>
             <div className="icon-container">
               <h2>
-                <i className="fa fa-droplet water-icon"></i>
+                <i className="fa fa-droplet water-icon"></i>{" "}
                 {Number.isInteger(rain.rain_until_date) === true
                   ? rain.rain_until_date + ",00"
                   : rain.rain_until_date}{" "}
