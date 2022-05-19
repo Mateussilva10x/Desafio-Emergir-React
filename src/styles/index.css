@@ -5,14 +5,14 @@
 }
 
 html {
-  background-color: #F5F6FA;
+  background-color: #f5f6fa;
   font-family: "Inter", sans-serif;
   height: 100%;
   width: 100%;
 }
 html span {
   font-size: 12px;
-  color: #20252B;
+  color: #20252b;
   font-weight: 700;
 }
 html h3 {

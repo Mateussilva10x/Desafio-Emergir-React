@@ -63,7 +63,10 @@ const PlantationsRow = ({ plantations, isFirst }) => {
         <Notes
           notes={notesPlantations
             .filter((notes) => notes.location.id === plantations.id)
-            .reverse()}
+            .sort(
+              (a, b) =>
+                new Date(...b.date.split("/")) - new Date(...a.date.split("/"))
+            )}
         />
       )}
     </>

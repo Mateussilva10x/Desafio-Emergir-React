@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { DataContext } from "../../../context/Data";
+
 import "./aside.css";
 
 const Aside = () => {
@@ -57,7 +58,7 @@ const Aside = () => {
         <p>{farm.details.observation}</p>
       </div>
       <div className="main-aside-content">
-        <button className="btn">
+        <button onClick={() => window.print()} className="btn">
           <i className="fa-solid fa-print"></i>imprimir
         </button>
       </div>
