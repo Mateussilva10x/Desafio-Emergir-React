@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { PlantationsContext } from "../../../context/PlantationsContext";
+
 import PlantationsRow from "./PlantationsRow";
 
-import "./plantations.css";
+import "../../../styles/plantations.scss";
 
 const Plantations = () => {
   const { plantations } = useContext(PlantationsContext);

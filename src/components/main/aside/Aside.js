@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { DataContext } from "../../../context/Data";
 
-import "./aside.css";
+import "../../../styles/aside.scss";
 
 const Aside = () => {
   const { farm, rain } = useContext(DataContext);

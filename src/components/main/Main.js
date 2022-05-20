@@ -1,7 +1,7 @@
 import Aside from "./aside/Aside";
 import MainContent from "./maincontent/MainContent";
 
-import "./main.css";
+import "../../styles/main.scss";
 
 const Main = () => {
   return (

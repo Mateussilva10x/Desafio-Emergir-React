@@ -1,5 +1,6 @@
-import "./notes.css";
 import NotesContent from "./NotesContent";
+
+import "../../../styles/notes.scss";
 
 const Notes = ({ notes }) => {
   return (
