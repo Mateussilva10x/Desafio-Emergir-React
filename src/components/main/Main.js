@@ -3,11 +3,11 @@ import { DataContext } from "../../context/Data";
 import { NotesContext } from "../../context/NotesContext";
 import { PlantationsContext } from "../../context/PlantationsContext";
 
-import "./main.css";
-
 import Aside from "./aside/Aside";
 import logo from "../../assets/logo.png";
 import MainContent from "./maincontent/MainContent";
+
+import "./main.css";
 
 const Main = () => {
   const { isLoading: notesLoading } = useContext(NotesContext);

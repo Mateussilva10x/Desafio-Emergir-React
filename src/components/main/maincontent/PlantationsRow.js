@@ -1,5 +1,5 @@
-import Notes from "../notes/Notes";
-import { NotesContext } from "../../../../context/NotesContext";
+import Notes from "./Notes";
+import { NotesContext } from "../../../context/NotesContext";
 import { useContext, useState } from "react";
 
 const PlantationsRow = ({ plantations, isFirst }) => {

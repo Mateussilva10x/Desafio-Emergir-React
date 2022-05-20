@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { PlantationsContext } from "../../../../context/PlantationsContext";
+import { PlantationsContext } from "../../../context/PlantationsContext";
 import PlantationsRow from "./PlantationsRow";
 
 import "./plantations.css";
