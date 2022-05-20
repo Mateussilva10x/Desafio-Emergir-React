@@ -1,6 +1,7 @@
-import Notes from "./Notes";
 import { NotesContext } from "../../../context/NotesContext";
 import { useContext, useState } from "react";
+
+import Notes from "./Notes";
 
 const PlantationsRow = ({ plantations, isFirst }) => {
   const { notesPlantations } = useContext(NotesContext);
