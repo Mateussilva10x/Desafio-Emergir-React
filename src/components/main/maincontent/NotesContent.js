@@ -1,17 +1,15 @@
-import { useState } from "react";
-import Modal from "../../Modal";
+import { useContext } from "react";
+import { ModalContext } from "../../../context/ModalContext";
 
 const NotesContent = ({ note }) => {
-  const [show, setShow] = useState(false);
-  const [showImage, setShowImage] = useState("");
+  const { toggleShow, handleImage } = useContext(ModalContext);
 
   const handleShowImage = (img) => {
-    setShowImage(img);
-    setShow(true);
+    toggleShow();
+    handleImage(img);
   };
   return (
     <div className="row-content">
-      <Modal onClose={() => setShow(false)} show={show} showImage={showImage} />
       <span>
         <i className="fa-solid fa-pencil"></i>Anotações{" "}
         <span className="space">{note.date.split("T")[1].slice(0, 5)}</span>

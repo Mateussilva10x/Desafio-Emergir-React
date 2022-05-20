@@ -7,6 +7,7 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Main from "./main/Main";
 import Loading from "./Loading";
+import Modal from "./Modal";
 
 const Container = () => {
   const { isLoading: notesLoading } = useContext(NotesContext);
@@ -20,6 +21,7 @@ const Container = () => {
         <Loading />
       ) : (
         <>
+          <Modal />
           <Header />
           <Main />
           <Footer />
