@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { DataContext } from "../../context/Data";
+import { FarmContext } from "../../context/FarmContext";
 
 import logoFb from "../../assets/logo-fb.png";
 
 import "../../styles/header.scss";
 
 const Header = () => {
-  const { farm } = useContext(DataContext);
+  const { farm } = useContext(FarmContext);
 
   if (!farm) return null;
 

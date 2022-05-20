@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import { DataProvider } from "../context/Data";
+import { FarmContextProvider } from "../context/FarmContext";
 import { ModalContextProvider } from "../context/ModalContext";
 import { NotesContextProvider } from "../context/NotesContext";
 import { PlantationsContextProvider } from "../context/PlantationsContext";
@@ -10,11 +10,11 @@ const Providers = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ModalContextProvider>
-        <DataProvider>
+        <FarmContextProvider>
           <NotesContextProvider>
             <PlantationsContextProvider>{children}</PlantationsContextProvider>
           </NotesContextProvider>
-        </DataProvider>
+        </FarmContextProvider>
       </ModalContextProvider>
     </QueryClientProvider>
   );

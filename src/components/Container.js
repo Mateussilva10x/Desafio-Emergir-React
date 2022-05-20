@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { NotesContext } from "../context/NotesContext";
 import { PlantationsContext } from "../context/PlantationsContext";
-import { DataContext } from "../context/Data";
+import { FarmContext } from "../context/FarmContext";
 
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
@@ -12,7 +12,7 @@ import Modal from "./Modal";
 const Container = () => {
   const { isLoading: notesLoading } = useContext(NotesContext);
   const { isLoading: plantationsLoading } = useContext(PlantationsContext);
-  const { isLoading: farmDetailsLoading } = useContext(DataContext);
+  const { isLoading: farmDetailsLoading } = useContext(FarmContext);
 
   const isLoading = notesLoading && plantationsLoading && farmDetailsLoading;
   return (

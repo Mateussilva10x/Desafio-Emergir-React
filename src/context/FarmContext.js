@@ -5,9 +5,9 @@ import { fetcher } from "../utils/Fetcher";
 const key = "https://justcors.com/tl_56f5f74/";
 const token = "379238b5-705c-48bc-b8c9-27e26676b417";
 
-export const DataContext = createContext();
+export const FarmContext = createContext();
 
-export const DataProvider = ({ children }) => {
+export const FarmContextProvider = ({ children }) => {
   const {
     data: farm,
     isLoading,
@@ -36,8 +36,8 @@ export const DataProvider = ({ children }) => {
     }
   );
   return (
-    <DataContext.Provider value={{ farm, rain, isLoading, error }}>
+    <FarmContext.Provider value={{ farm, rain, isLoading, error }}>
       {children}
-    </DataContext.Provider>
+    </FarmContext.Provider>
   );
 };
