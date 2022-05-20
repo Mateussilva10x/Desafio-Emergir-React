@@ -1,6 +1,7 @@
-import "../styles/notes.scss";
 import { useContext } from "react";
 import { ModalContext } from "../context/ModalContext";
+
+import "../styles/notes.scss";
 
 const Modal = () => {
   const { toggleShow, showImage, show } = useContext(ModalContext);

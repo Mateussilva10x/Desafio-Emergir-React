@@ -1,7 +1,8 @@
-import Notes from "./Notes";
-import Plantations from "./Plantations";
 import { useContext } from "react";
 import { NotesContext } from "../../../context/NotesContext";
+
+import Notes from "./Notes";
+import Plantations from "./Plantations";
 
 const MainContent = () => {
   const { notesFarm } = useContext(NotesContext);
