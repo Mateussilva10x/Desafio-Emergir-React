@@ -1,4 +1,4 @@
-import Notes from "../notes/Notes";
+import Notes from "./notes/Notes";
 import Plantations from "./plantations/Plantations";
 import { useContext } from "react";
 import { NotesContext } from "../../../context/NotesContext";
