@@ -6,6 +6,10 @@ import "./aside.css";
 const Aside = () => {
   const { farm, rain } = useContext(DataContext);
 
+  const handleClick = () => {
+    window.print();
+  };
+
   if (!farm) return null;
   if (!rain) return null;
 
@@ -58,7 +62,7 @@ const Aside = () => {
         <p>{farm.details.observation}</p>
       </div>
       <div className="main-aside-content">
-        <button onClick={() => window.print()} className="btn">
+        <button onClick={handleClick} className="btn">
           <i className="fa-solid fa-print"></i>imprimir
         </button>
       </div>

@@ -6,6 +6,12 @@ const PlantationsRow = ({ plantations, isFirst }) => {
   const { notesPlantations } = useContext(NotesContext);
   const [active, setActive] = useState(isFirst);
 
+  const notesArray = notesPlantations
+    .filter((notes) => notes.location.id === plantations.id)
+    .sort(
+      (a, b) => new Date(...b.date.split("/")) - new Date(...a.date.split("/"))
+    );
+
   const toggleClass = () => {
     setActive(!active);
   };
@@ -59,16 +65,7 @@ const PlantationsRow = ({ plantations, isFirst }) => {
           </div>
         </div>
       </div>
-      {active && (
-        <Notes
-          notes={notesPlantations
-            .filter((notes) => notes.location.id === plantations.id)
-            .sort(
-              (a, b) =>
-                new Date(...b.date.split("/")) - new Date(...a.date.split("/"))
-            )}
-        />
-      )}
+      {active && <Notes notes={notesArray} />}
     </>
   );
 };

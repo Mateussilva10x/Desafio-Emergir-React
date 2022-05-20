@@ -3,7 +3,7 @@ import { createContext } from "react";
 import { useQuery } from "react-query";
 import { fetcher } from "../utils/Fetcher";
 
-const key = "https://justcors.com/tl_ab637e4/";
+const key = "https://justcors.com/tl_56f5f74/";
 const token = "379238b5-705c-48bc-b8c9-27e26676b417";
 
 export const NotesContext = createContext();
@@ -15,7 +15,10 @@ export const NotesContextProvider = ({ children }) => {
     data: notes,
     isLoading,
     error,
-  } = useQuery("allNotes", () => fetcher(url));
+  } = useQuery("allNotes", () => fetcher(url), {
+    refetchIntervalInBackground: true,
+    refetchInterval: 60000,
+  });
 
   const notesFarm = [];
   const notesPlantations = [];

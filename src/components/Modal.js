@@ -5,7 +5,11 @@ const Modal = (props) => {
     <div id="modal" className="modal">
       <div className="modal-content">
         <div className="images-modal">
-          <img id="image-hight" src="" alt="" />
+          <img
+            id="image-hight"
+            src={props.showImage}
+            alt="images from each note expanded"
+          />
         </div>
         <span onClick={props.onClose} className="close">
           &times;

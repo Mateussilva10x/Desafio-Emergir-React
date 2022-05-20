@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DataContext } from "../../context/Data";
 import "./header.css";
+import logoFb from "../../assets/logo-fb.png";
 
 const Header = () => {
   const { farm } = useContext(DataContext);
@@ -17,7 +18,7 @@ const Header = () => {
         </h1>
       </div>
       <div id="img-header" className="header-img">
-        <img src="logo-fb.png" alt="" />
+        <img src={logoFb} alt="" />
       </div>
     </header>
   );

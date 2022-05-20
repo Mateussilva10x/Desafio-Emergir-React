@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { PlantationsContextProvider } from "./context/PlantationsContext";
+import "./App.css";
 
 function App() {
   const queryClient = new QueryClient();
