@@ -1,6 +1,7 @@
 @use "mixins";
+
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 9999;
   padding-top: 100px;
@@ -46,6 +47,7 @@
 .content {
   width: 768px;
   flex: 1;
+  break-inside: avoid;
 
   h2 {
     margin-bottom: 8px;
