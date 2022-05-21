@@ -3,7 +3,7 @@ import { createContext } from "react";
 import { useQuery } from "react-query";
 import { fetcher } from "../utils/Fetcher";
 
-const key = "https://justcors.com/tl_56f5f74/";
+const key = "https://justcors.com/tl_af377bd/";
 const token = "379238b5-705c-48bc-b8c9-27e26676b417";
 
 export const PlantationsContext = createContext();
