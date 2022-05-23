@@ -16,7 +16,6 @@ export const PlantationsContextProvider = ({ children }) => {
     () => fetcher(url),
     {
       refetchIntervalInBackground: true,
-      refetchInterval: 60000,
     }
   );
 

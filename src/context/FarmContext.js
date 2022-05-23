@@ -16,7 +16,6 @@ export const FarmContextProvider = ({ children }) => {
       ),
     {
       refetchIntervalInBackground: true,
-      refetchInterval: 60000,
     }
   );
 
@@ -28,7 +27,6 @@ export const FarmContextProvider = ({ children }) => {
       ),
     {
       refetchIntervalInBackground: true,
-      refetchInterval: 60000,
     }
   );
   return (

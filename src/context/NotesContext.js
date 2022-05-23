@@ -13,7 +13,6 @@ export const NotesContextProvider = ({ children }) => {
 
   const { data: notes, isLoading } = useQuery("allNotes", () => fetcher(url), {
     refetchIntervalInBackground: true,
-    refetchInterval: 60000,
   });
 
   const notesFarm = [];
